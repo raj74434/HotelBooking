@@ -1,7 +1,6 @@
 package com.hotel.hotelService.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,11 +8,13 @@ import java.util.List;
 public class Hotel {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
     private String address;
     private Integer price;
 
+    @Transient
     private List<Rating> ratings=new ArrayList<>();
 
     public Integer getId() {
