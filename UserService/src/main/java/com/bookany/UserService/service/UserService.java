@@ -10,4 +10,6 @@ public interface UserService {
     public User createUser(UserDto dto);
     public List<User> allUser();
 
+    public User getById(Integer id) throws Exception;
+
 }

@@ -17,6 +17,8 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+
+
     @PostMapping("/create")
     public ResponseEntity<User> createUser(@RequestBody UserDto dto){
 
@@ -28,6 +30,18 @@ public class UserController {
     public ResponseEntity<List<User>> allUsers(){
         return new ResponseEntity<>(userService.allUser(),HttpStatus.OK);
     }
+
+    @GetMapping("/{userId}")
+    public ResponseEntity<User> getById(@PathVariable Integer userId){
+        try {
+            User user=userService.getById(userId);
+            return new ResponseEntity<>(user,HttpStatus.OK);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
 
 
 

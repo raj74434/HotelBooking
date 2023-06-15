@@ -13,8 +13,12 @@ public class User {
     private String lastName;
     private String phone;
     private String password;
+
     @Transient
-    List<Hotel> bookings=new ArrayList<>();
+    List<Hotel> hotels=new ArrayList<>();
+
+    @Transient
+    List<Bookings> bookings=new ArrayList<>();
 
     public int getId() {
         return id;
@@ -56,11 +60,20 @@ public class User {
         this.password = password;
     }
 
-    public List<Hotel> getBookings() {
+    public List<Bookings> getBookings() {
         return bookings;
     }
 
-    public void setBookings(List<Hotel> bookings) {
+    public void setBookings(List<Bookings> bookings) {
         this.bookings = bookings;
+    }
+
+
+    public List<Hotel> getHotels() {
+        return hotels;
+    }
+
+    public void setHotels(List<Hotel> hotels) {
+        this.hotels = hotels;
     }
 }
