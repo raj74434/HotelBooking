@@ -2,6 +2,7 @@ package com.hotel.hotelService.controllers;
 
 import com.hotel.hotelService.models.Hotel;
 import com.hotel.hotelService.service.HotelServices;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -13,6 +14,7 @@ import java.util.List;
 @RequestMapping("/hotel")
 public class HotelController {
 
+    @Autowired
     private HotelServices hotelService;
 
     @PostMapping("/create")
