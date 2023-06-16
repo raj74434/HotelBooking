@@ -18,12 +18,12 @@
 		<spring-cloud.version>2021.0.7</spring-cloud.version>
 	</properties>
 	<dependencies>
-
+<!--  Feign client dependency  -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
-
+<!--                 -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-loadbalancer</artifactId>
