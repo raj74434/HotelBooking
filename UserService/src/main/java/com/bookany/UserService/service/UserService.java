@@ -12,4 +12,6 @@ public interface UserService {
 
     public User getById(Integer id) throws Exception;
 
+    public User getByPhone(String phone) throws Exception;
+
 }

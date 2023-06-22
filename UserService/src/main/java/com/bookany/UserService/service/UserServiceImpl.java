@@ -48,4 +48,11 @@ public class UserServiceImpl implements  UserService {
         user.setHotels(hotel);
         return user;
     }
+
+    public User getByPhone(String phone) throws Exception {
+        User user=userRepo.findByPhone(phone).orElseThrow(()-> new Exception("No User found"));
+        return user;
+    }
+
+
 }

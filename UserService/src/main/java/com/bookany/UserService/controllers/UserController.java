@@ -42,6 +42,17 @@ public class UserController {
 
     }
 
+    @GetMapping("/phone/{phone}")
+    public ResponseEntity<User> getByPhone(@PathVariable String phone){
+        try {
+            User user=userService.getByPhone(phone);
+            return new ResponseEntity<>(user,HttpStatus.OK);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
 
 
 
