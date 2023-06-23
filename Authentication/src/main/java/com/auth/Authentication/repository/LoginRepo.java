@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface LoginRepo  extends JpaRepository<Login,Integer> {
 
-    public Login findByEmail(String email);
+    public Login findByPhone(String email);
     public Login findByUuid(String uuid);
 
 

@@ -13,7 +13,7 @@ public class Login {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-
+    private String phone;
     private LocalDateTime dateTime;
 
     private String uuid;
