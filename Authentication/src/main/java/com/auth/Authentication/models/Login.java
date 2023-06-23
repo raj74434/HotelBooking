@@ -13,7 +13,6 @@ public class Login {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private String email;
 
     private LocalDateTime dateTime;
 
@@ -35,13 +34,7 @@ public class Login {
         this.id = id;
     }
 
-    public String getEmail() {
-        return email;
-    }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
 
     public LocalDateTime getDateTime() {
         return dateTime;
